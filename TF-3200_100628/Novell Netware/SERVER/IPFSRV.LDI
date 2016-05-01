@@ -1,0 +1,276 @@
+;DrIvEr DeScRiPtIoN
+;VeRsIoN=2.0.0
+;CoPyRiGhT= Copyright (c) 2008, TP-LINK TECHNOLOGIES CO., LTD. All Rights Reserved. All Rights Reserved.
+
+VER: 2.0.0
+SYN: 1.00
+
+DR IPFSRV
+{
+        DES:    $IPFSRV_1
+        HELP:   $IPFSRV_2
+        PAR:    2.00
+        PROD:   PCI.1186.1002.*.*.*
+        PROD:   PCI.13F0.0201.*.*.*
+        PROD:   PCI.13F0.0200.*.*.*
+
+        FILE:   IPFSRV.LAN
+
+;@#     SPROD: 'TP-LINK TF-3200 10/100 Fast Ethernet Adapter'
+;@#     CLIENT: IPFSRV.LAN
+;@#     ALIAS: IPFSRV.LAN
+
+        PR SLOT OPT
+        {
+                DES:    $IPFSRV_3
+                HELP:   $IPFSRV_4
+
+                TYP:    DEC
+                VAL:    1-65535
+                DEF:    UND
+                OUT:    'SLOT=%s'
+        }
+
+        FR FrameSelect
+        {
+                CD:     $IPFSRV_5
+                CH:     $IPFSRV_6
+                CD:     $IPFSRV_7
+                CH:     $IPFSRV_8
+                CD:     $IPFSRV_9
+                CH:     $IPFSRV_10
+                CD:     $IPFSRV_11
+                CH:     $IPFSRV_12
+                DEF:    1,2,3,4
+        }
+
+        LI Attachment OPT
+        {
+                DES:    $IPFSRV_13
+                HELP:   $IPFSRV_14
+
+                CD:     $IPFSRV_17
+                CH:     $IPFSRV_18
+                CD:     $IPFSRV_19
+                CH:     $IPFSRV_20
+                CD:     $IPFSRV_21
+                CH:     $IPFSRV_22
+                CD:     $IPFSRV_23
+                CH:     $IPFSRV_24
+                CD:     $IPFSRV_25
+                CH:     $IPFSRV_26
+                DEF:    1
+                OUT:    '%s'
+        }
+
+        PR NODE OPT
+        {
+                DES:    $IPFSRV_27
+                TYP:    HEX
+                VAL:    1-FFFFFFFFFFFE
+                DEF:    UND
+                OUT:    'NODE=%s'
+        }
+
+}
+
+
+DLANG:  4
+;English
+        $IPFSRV_1 = "TP-LINK TF-3200 10/100 Fast Ethernet Adapter"
+        $IPFSRV_2 = "This driver supports PCI bus devices"
+        $IPFSRV_3 = "Slot"
+        $IPFSRV_4 = "Select the slot number that corresponds to the physical
+                        expansion slot where the board or other device is installed."
+        $IPFSRV_5 = "802.3"
+        $IPFSRV_6 = "ethernet_802.3"
+        $IPFSRV_7 = "802.2"
+        $IPFSRV_8 = "ethernet_802.2"
+        $IPFSRV_9 = "SNAP"
+        $IPFSRV_10 = "ethernet_snap"
+        $IPFSRV_11 = "ethernet II"
+        $IPFSRV_12 = "ethernet_II"
+        $IPFSRV_13 = "Media and Line Speed"
+        $IPFSRV_14 = "Choose the connection/media type you would
+                       like to use, or NONE for preprogramed card's
+                       default."
+        $IPFSRV_15 = "Auto Sense"
+        $IPFSRV_16 = ""
+        $IPFSRV_17 = "Auto-Sense media type"
+        $IPFSRV_18 = "Autosense"
+        $IPFSRV_19 = "Twisted Pair 10MBPS"
+        $IPFSRV_20 = "10BASET"
+        $IPFSRV_21 = "Twisted pair - Full Duplex 10MBPS"
+        $IPFSRV_22 = "10BASETFD"
+        $IPFSRV_23 = "Twisted pair - Full Duplex 100MBPS"
+        $IPFSRV_24 = "100BASETXFD"
+        $IPFSRV_25 = "Fast Ethernet 100MBPS"
+        $IPFSRV_26 = "100BASETX"
+        $IPFSRV_27 = "Node Address"
+
+LANG:  6
+;French
+        $IPFSRV_1 = "TP-LINK TF-3200 10/100 Fast Ethernet Adapter"
+        $IPFSRV_2 = "This driver supports PCI bus devices"
+        $IPFSRV_3 = "Slot"
+        $IPFSRV_4 = "Select the slot number that corresponds to the physical
+                        expansion slot where the board or other device is installed."
+        $IPFSRV_5 = "802.3"
+        $IPFSRV_6 = "ethernet_802.3"
+        $IPFSRV_7 = "802.2"
+        $IPFSRV_8 = "ethernet_802.2"
+        $IPFSRV_9 = "SNAP"
+        $IPFSRV_10 = "ethernet_snap"
+        $IPFSRV_11 = "ethernet II"
+        $IPFSRV_12 = "ethernet_II"
+        $IPFSRV_13 = "Media and Line Speed"
+        $IPFSRV_14 = "Choose the connection/media type you would
+                       like to use, or NONE for preprogramed card's
+                       default."
+        $IPFSRV_15 = "Auto Sense"
+        $IPFSRV_16 = ""
+        $IPFSRV_17 = "Auto-Sense media type"
+        $IPFSRV_18 = "Autosense"
+        $IPFSRV_19 = "Twisted Pair 10MBPS"
+        $IPFSRV_20 = "10BASET"
+        $IPFSRV_21 = "Twisted pair - Full Duplex 10MBPS"
+        $IPFSRV_22 = "10BASETFD"
+        $IPFSRV_23 = "Twisted pair - Full Duplex 100MBPS"
+        $IPFSRV_24 = "100BASETXFD"
+        $IPFSRV_25 = "Fast Ethernet 100MBPS"
+        $IPFSRV_26 = "100BASETX"
+        $IPFSRV_27 = "Node Address"
+
+LANG:  7
+;German
+        $IPFSRV_1 = "TP-LINK TF-3200 10/100 Fast Ethernet Adapter"
+        $IPFSRV_2 = "This driver supports PCI bus devices"
+        $IPFSRV_3 = "Slot"
+        $IPFSRV_4 = "Select the slot number that corresponds to the physical
+                        expansion slot where the board or other device is installed."
+        $IPFSRV_5 = "802.3"
+        $IPFSRV_6 = "ethernet_802.3"
+        $IPFSRV_7 = "802.2"
+        $IPFSRV_8 = "ethernet_802.2"
+        $IPFSRV_9 = "SNAP"
+        $IPFSRV_10 = "ethernet_snap"
+        $IPFSRV_11 = "ethernet II"
+        $IPFSRV_12 = "ethernet_II"
+        $IPFSRV_13 = "Media and Line Speed"
+        $IPFSRV_14 = "Choose the connection/media type you would
+                       like to use, or NONE for preprogramed card's
+                       default."
+        $IPFSRV_15 = "Auto Sense"
+        $IPFSRV_16 = ""
+        $IPFSRV_17 = "Auto-Sense media type"
+        $IPFSRV_18 = "Autosense"
+        $IPFSRV_19 = "Twisted Pair 10MBPS"
+        $IPFSRV_20 = "10BASET"
+        $IPFSRV_21 = "Twisted pair - Full Duplex 10MBPS"
+        $IPFSRV_22 = "10BASETFD"
+        $IPFSRV_23 = "Twisted pair - Full Duplex 100MBPS"
+        $IPFSRV_24 = "100BASETXFD"
+        $IPFSRV_25 = "Fast Ethernet 100MBPS"
+        $IPFSRV_26 = "100BASETX"
+        $IPFSRV_27 = "Node Address"
+
+LANG:  8
+;Italian
+        $IPFSRV_1 = "TP-LINK TF-3200 10/100 Fast Ethernet Adapter"
+        $IPFSRV_2 = "This driver supports PCI bus devices"
+        $IPFSRV_3 = "Slot"
+        $IPFSRV_4 = "Select the slot number that corresponds to the physical
+                        expansion slot where the board or other device is installed."
+        $IPFSRV_5 = "802.3"
+        $IPFSRV_6 = "ethernet_802.3"
+        $IPFSRV_7 = "802.2"
+        $IPFSRV_8 = "ethernet_802.2"
+        $IPFSRV_9 = "SNAP"
+        $IPFSRV_10 = "ethernet_snap"
+        $IPFSRV_11 = "ethernet II"
+        $IPFSRV_12 = "ethernet_II"
+        $IPFSRV_13 = "Media and Line Speed"
+        $IPFSRV_14 = "Choose the connection/media type you would
+                       like to use, or NONE for preprogramed card's
+                       default."
+        $IPFSRV_15 = "Auto Sense"
+        $IPFSRV_16 = ""
+        $IPFSRV_17 = "Auto-Sense media type"
+        $IPFSRV_18 = "Autosense"
+        $IPFSRV_19 = "Twisted Pair 10MBPS"
+        $IPFSRV_20 = "10BASET"
+        $IPFSRV_21 = "Twisted pair - Full Duplex 10MBPS"
+        $IPFSRV_22 = "10BASETFD"
+        $IPFSRV_23 = "Twisted pair - Full Duplex 100MBPS"
+        $IPFSRV_24 = "100BASETXFD"
+        $IPFSRV_25 = "Fast Ethernet 100MBPS"
+        $IPFSRV_26 = "100BASETX"
+        $IPFSRV_27 = "Node Address"
+
+LANG:  14
+;Spanish
+        $IPFSRV_1 = "TP-LINK TF-3200 10/100 Fast Ethernet Adapter"
+        $IPFSRV_2 = "This driver supports PCI bus devices"
+        $IPFSRV_3 = "Slot"
+        $IPFSRV_4 = "Select the slot number that corresponds to the physical
+                        expansion slot where the board or other device is installed."
+        $IPFSRV_5 = "802.3"
+        $IPFSRV_6 = "ethernet_802.3"
+        $IPFSRV_7 = "802.2"
+        $IPFSRV_8 = "ethernet_802.2"
+        $IPFSRV_9 = "SNAP"
+        $IPFSRV_10 = "ethernet_snap"
+        $IPFSRV_11 = "ethernet II"
+        $IPFSRV_12 = "ethernet_II"
+        $IPFSRV_13 = "Media and Line Speed"
+        $IPFSRV_14 = "Choose the connection/media type you would
+                       like to use, or NONE for preprogramed card's
+                       default."
+        $IPFSRV_15 = "Auto Sense"
+        $IPFSRV_16 = ""
+        $IPFSRV_17 = "Auto-Sense media type"
+        $IPFSRV_18 = "Autosense"
+        $IPFSRV_19 = "Twisted Pair 10MBPS"
+        $IPFSRV_20 = "10BASET"
+        $IPFSRV_21 = "Twisted pair - Full Duplex 10MBPS"
+        $IPFSRV_22 = "10BASETFD"
+        $IPFSRV_23 = "Twisted pair - Full Duplex 100MBPS"
+        $IPFSRV_24 = "100BASETXFD"
+        $IPFSRV_25 = "Fast Ethernet 100MBPS"
+        $IPFSRV_26 = "100BASETX"
+        $IPFSRV_27 = "Node Address"
+
+LANG:  16
+;chinese (t)
+        $IPFSRV_1 = "TP-LINK TF-3200 10/100 Fast Ethernet Adapter"
+        $IPFSRV_2 = "This driver supports PCI bus devices"
+        $IPFSRV_3 = "Slot"
+        $IPFSRV_4 = "Select the slot number that corresponds to the physical
+                        expansion slot where the board or other device is installed."
+        $IPFSRV_5 = "802.3"
+        $IPFSRV_6 = "ethernet_802.3"
+        $IPFSRV_7 = "802.2"
+        $IPFSRV_8 = "ethernet_802.2"
+        $IPFSRV_9 = "SNAP"
+        $IPFSRV_10 = "ethernet_snap"
+        $IPFSRV_11 = "ethernet II"
+        $IPFSRV_12 = "ethernet_II"
+        $IPFSRV_13 = "Media and Line Speed"
+        $IPFSRV_14 = "Choose the connection/media type you would
+                       like to use, or NONE for preprogramed card's
+                       default."
+        $IPFSRV_15 = "Auto Sense"
+        $IPFSRV_16 = ""
+        $IPFSRV_17 = "Auto-Sense media type"
+        $IPFSRV_18 = "Autosense"
+        $IPFSRV_19 = "Twisted Pair 10MBPS"
+        $IPFSRV_20 = "10BASET"
+        $IPFSRV_21 = "Twisted pair - Full Duplex 10MBPS"
+        $IPFSRV_22 = "10BASETFD"
+        $IPFSRV_23 = "Twisted pair - Full Duplex 100MBPS"
+        $IPFSRV_24 = "100BASETXFD"
+        $IPFSRV_25 = "Fast Ethernet 100MBPS"
+        $IPFSRV_26 = "100BASETX"
+        $IPFSRV_27 = "Node Address"
+
+;DrIvEr DeScRiPtIoN EnD
